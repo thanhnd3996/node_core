@@ -1,4 +1,11 @@
 import Reader from './jsonreader.js';
-
-let A = new Reader();
-A.read_json('./data.json');
+import EventEmitter from 'events';
+export default class Main extends EventEmitter {
+    constructor() {
+        let A = new Reader();
+        const result = A.emit('RequestReadFile', './data.json');
+        this.on('ResponeReadFile', (json) => {
+            
+        });
+    }
+}
