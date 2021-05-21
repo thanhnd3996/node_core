@@ -5,7 +5,9 @@ export default class Main extends EventEmitter {
         let A = new Reader();
         const result = A.emit('RequestReadFile', './data.json');
         this.on('ResponeReadFile', (json) => {
-            
+            this.emit('');
         });
     }
 }
+
+console.log('Hello Event');
