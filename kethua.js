@@ -1,7 +1,8 @@
 import EventEmitter from 'events';
 
 export default class MyEmitter extends EventEmitter {
-    constructor(a, b) {
+    constructor() {
+        super();
         this.on('OnCatchData', (a, b) => {
             console.log(a + ': ' + b);
         });
