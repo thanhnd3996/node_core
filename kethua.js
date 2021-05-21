@@ -1,3 +1,9 @@
 import EventEmitter from 'events';
-// export default class KeThua extends EventEmitter {}
-export default class MyEmitter2 extends EventEmitter {}
+
+export default class MyEmitter extends EventEmitter {
+    constructor(a, b) {
+        this.on('OnCatchData', (a, b) => {
+            console.log(a + ': ' + b);
+        });
+    }
+}
