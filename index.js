@@ -1,13 +1,4 @@
-import Reader from './jsonreader.js';
-import EventEmitter from 'events';
-export default class Main extends EventEmitter {
-    constructor() {
-        let A = new Reader();
-        const result = A.emit('RequestReadFile', './data.json');
-        this.on('ResponeReadFile', (json) => {
-            this.emit('');
-        });
-    }
-}
+import MyEvent1 from './myevent1.js';
 
-console.log('Hello Event');
+let event1 = new MyEvent1();
+event1.request_read_file('./data.json');
