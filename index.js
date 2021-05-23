@@ -1,4 +1,8 @@
-import MyEvent1 from './myevent1.js';
-
-let event1 = new MyEvent1();
-event1.request_read_file('./data.json');
+import fs from 'fs';
+fs.readFile('./EventInfo.js', 'utf8', (err, data) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+});
