@@ -6,12 +6,6 @@
     "active": true,
     "members": [
         {
-            "name": "Molecule Woman",
-            "age": 30,
-            "secretIdentity": "Dan Jukes",
-            "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-        },
-        {
             "name": "Molecule Man",
             "age": 29,
             "secretIdentity": "Dan Jukes",
