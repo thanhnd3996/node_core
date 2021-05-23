@@ -4,8 +4,8 @@ import fs from 'fs';
 export default class MyEvent2 extends EventEmitter {
     constructor() {
         super();
-        let event1 = new MyEvent1();
         this.on('RequestReadFile', (filePath) => {
+            let event1 = new MyEvent1();
             fs.readFile(filePath, 'utf8', (err, data) => {
                 if (err) {
                     console.log(err);
