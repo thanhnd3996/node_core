@@ -1,13 +1,4 @@
-import fs from 'fs';
-fs.readFile('./EventInfo.json', 'utf8', (err, data) => {
-    if (err) {
-        console.log(err);
-    } else {
-        const events = JSON.parse(data);
-        console.log(events.event2.info);
+import Event1 from './event1.js';
 
-        Object.keys(events).forEach((evt) => {
-            eval(`${events}.${evt}`);
-        });
-    }
-});
+let event1 = new Event1();
+event1.browsing('./EventInfo.json');
