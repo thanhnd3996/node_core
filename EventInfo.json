@@ -1,14 +1,14 @@
 {
     "event2": {
-        "handle": "require('event2.json')",
-        "info": "require('event2.info.json')"
+        "handle": "require('./event2.json')",
+        "info": "require('./event2.info.json')"
     },
     "event3": {
-        "handle": "require('event3.json')",
-        "info": "require('event3.info.json')"
+        "handle": "require('./event3.json')",
+        "info": "require('./event3.info.json')"
     },
     "event4": {
-        "handle": "require('event4.json')",
-        "info": "require('event4.info.json')"
+        "handle": "require('./event4.json')",
+        "info": "require('./event4.info.json')"
     }
 }
