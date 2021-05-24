@@ -1,4 +1,8 @@
-import Reader from './jsonreader.js';
-
-let A = new Reader();
-A.read_json('./data.json');
+import fs from 'fs';
+fs.readFile('./EventInfo.js', 'utf8', (err, data) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+});
