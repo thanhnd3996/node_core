@@ -8,8 +8,17 @@ export default class Event1 {
             } else {
                 const events = JSON.parse(data);
                 Object.values(events).forEach((evt) => {
-                    let obj = eval(evt.info);
-                    console.log(obj);
+                    fs.readFile(evt.info, 'utf8', (err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            const info = JSON.parse(data);
+
+                            Object.values(info).forEach(() => {
+                                console.log(info.isEnabled);
+                            });
+                        }
+                    });
                 });
             }
         });
