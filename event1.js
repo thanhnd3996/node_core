@@ -8,7 +8,8 @@ export default class Event1 {
             } else {
                 const events = JSON.parse(data);
                 Object.values(events).forEach((evt) => {
-                    console.log(evt.info);
+                    let obj = eval(evt.info);
+                    console.log(obj);
                 });
             }
         });
