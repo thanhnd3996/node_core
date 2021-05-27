@@ -4,11 +4,11 @@
         "info": "./event2.info.json"
     },
     "event3": {
-        "handle": "./event3.json",
+        "handle": "./event3.js",
         "info": "./event3.info.json"
     },
     "event4": {
-        "handle": "./event4.json",
+        "handle": "./event4.js",
         "info": "./event4.info.json"
     }
 }

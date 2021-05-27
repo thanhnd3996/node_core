@@ -12,16 +12,16 @@ export default class Event1 extends EventEmitter {
 
     browsing(file_path) {
         let evt_list = [];
-        let data1 = fs.readFileSync(file_path, 'utf8');
+        let handle_file_list = [];
         // read EventInfo.json
-        const events = JSON.parse(data1);
+        const events = JSON.parse(fs.readFileSync(file_path, 'utf8'));
         Object.values(events).forEach((evt) => {
-            let data2 = fs.readFileSync(evt.info, 'utf8');
             //read event.info.json
-            const info = JSON.parse(data2);
+            const info = JSON.parse(fs.readFileSync(evt.info, 'utf8'));
             if (info.isEnabled) {
-                // fs.readFile(evt.handle, 'utf8', (err, handle));
                 evt_list.push(info.name);
+                let data = fs.readFileSync(evt.handle, 'utf8');
+                handle_file_list.push(data);
             }
         });
         return evt_list;
