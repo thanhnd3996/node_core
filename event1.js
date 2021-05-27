@@ -4,9 +4,8 @@ import fs from 'fs';
 export default class Event1 extends EventEmitter {
     constructor() {
         super();
-        this.on('ListEnabledEvent', (filepath) => {
-            let evt_list = this.browsing(filepath);
-            console.log(`list of enabled event: ${evt_list}`);
+        this.on('ListEnabledEvent', (param) => {
+            //code
         });
     }
 
@@ -24,6 +23,7 @@ export default class Event1 extends EventEmitter {
                 handle_file_list.push(data);
             }
         });
-        return evt_list;
+        console.log(`list of enabled event: ${evt_list}`);
+        return handle_file_list;
     }
 }
